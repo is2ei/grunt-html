@@ -17,7 +17,7 @@
   },
   "type": "module",
   "exports": {
-    ".": "./tasks/html.js",
+    ".": "./tasks/html.cjs",
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -49,7 +49,7 @@
     "gruntplugin"
   ],
   "files": [
-    "{lib,tasks}/**/*.js"
+    "{lib,tasks}/**/*.{cjs,js}"
   ],
   "c8": {
     "reporter": [
