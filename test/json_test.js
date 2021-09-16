@@ -1,8 +1,6 @@
-'use strict';
-
-const assert = require('assert').strict;
-const reporter = require('../lib/reporters/json.js');
-const expectedResults = require('./helpers/expected_results.js');
+import { strict as assert } from 'node:assert';
+import { json as reporter } from '../lib/reporters/json.js';
+import { results as expectedResults } from './helpers/expected_results.js';
 
 describe('json reporter', () => {
   it('when given empty result', done => {

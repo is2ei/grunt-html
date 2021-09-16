@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert').strict;
-const chunkify = require('../lib/chunkify.js');
+import { strict as assert } from 'node:assert';
+import { chunkify } from '../lib/chunkify.js';
 
 describe('chunkify', () => {
   it('should chunkify results', done => {

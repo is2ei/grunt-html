@@ -6,13 +6,11 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+import path from 'node:path';
+import { htmllint } from '../lib/htmllint.js';
+import { reporters } from '../lib/reporters.js';
 
-const path = require('path');
-const htmllint = require('../lib/htmllint.js');
-const reporters = require('../lib/reporters.js');
-
-module.exports = function(grunt) {
+function gruntHtmllint(grunt) {
   grunt.registerMultiTask('htmllint', 'Validate html files', function() {
     const done = this.async();
     const files = grunt.file.expand(this.filesSrc);
@@ -74,4 +72,6 @@ module.exports = function(grunt) {
       done(passed);
     });
   });
-};
+}
+
+export default gruntHtmllint;

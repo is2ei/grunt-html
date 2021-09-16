@@ -1,5 +1,3 @@
-'use strict';
+const reporter = () => '';
 
-module.exports = () => {
-  return '';
-};
+export { reporter };

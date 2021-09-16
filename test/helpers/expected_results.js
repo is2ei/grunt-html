@@ -1,10 +1,8 @@
-'use strict';
-
-const path = require('path');
+import path from 'node:path';
 
 const file = path.normalize('test/fixtures/invalid.html');
 
-module.exports = {
+const results = {
   invalid: [
     {
       lastLine: 1,
@@ -36,3 +34,5 @@ module.exports = {
     }
   ]
 };
+
+export { results };

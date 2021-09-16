@@ -1,14 +1,12 @@
-'use strict';
-
-const assert = require('assert').strict;
-const path = require('path');
-const stripAnsi = require('strip-ansi');
-const { defaultReporter, selectReporter } = require('../lib/reporters.js');
-const checkstyleReporter = require('../lib/reporters/checkstyle.js');
-const jsonReporter = require('../lib/reporters/json.js');
-const junitReporter = require('../lib/reporters/junit.js');
-const customReporter = require('./helpers/custom_reporter.js');
-const expectedResults = require('./helpers/expected_results.js');
+import { strict as assert } from 'node:assert';
+import path from 'node:path';
+import stripAnsi from 'strip-ansi';
+import { defaultReporter, selectReporter } from '../lib/reporters.js';
+import { checkstyle as checkstyleReporter } from '../lib/reporters/checkstyle.js';
+import { json as jsonReporter } from '../lib/reporters/json.js';
+import { junit as junitReporter } from '../lib/reporters/junit.js';
+import { reporter as customReporter } from './helpers/custom_reporter.js';
+import { results as expectedResults } from './helpers/expected_results.js';
 
 describe('reporters', () => {
   describe('default reporter', () => {

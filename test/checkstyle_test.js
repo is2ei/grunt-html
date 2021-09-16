@@ -1,9 +1,7 @@
-'use strict';
-
-const assert = require('assert').strict;
-const path = require('path');
-const reporter = require('../lib/reporters/checkstyle.js');
-const expectedResults = require('./helpers/expected_results.js');
+import { strict as assert } from 'node:assert';
+import path from 'node:path';
+import { checkstyle as reporter } from '../lib/reporters/checkstyle.js';
+import { results as expectedResults } from './helpers/expected_results.js';
 
 describe('checkstyle reporter', () => {
   it('when given empty result', done => {

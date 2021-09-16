@@ -15,12 +15,17 @@
   "engines": {
     "node": ">=12"
   },
+  "type": "module",
+  "exports": {
+    ".": "./tasks/html.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "mocha": "mocha",
     "lint": "xo",
     "fix": "xo --fix",
     "test": "npm run lint && npm run mocha",
-    "test:grunt": "grunt ci --force",
+    "test:grunt": "grunt ci --gruntfile gruntfile.cjs --force",
     "test:ci": "npm run mocha && npm run test:grunt",
     "test:coverage": "c8 npm run test:ci"
   },
@@ -33,7 +38,7 @@
     "c8": "^7.10.0",
     "grunt": "^1.4.1",
     "mocha": "^9.1.2",
-    "strip-ansi": "^6.0.1",
+    "strip-ansi": "^7.0.1",
     "time-grunt": "^2.0.0",
     "xo": "^0.45.0"
   },
@@ -83,7 +88,6 @@
         "never"
       ],
       "unicorn/filename-case": "off",
-      "unicorn/prefer-module": "off",
       "unicorn/prevent-abbreviations": "off"
     },
     "overrides": [

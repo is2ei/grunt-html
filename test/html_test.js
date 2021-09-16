@@ -1,10 +1,8 @@
-'use strict';
-
-const assert = require('assert').strict;
-const fs = require('fs');
-const path = require('path');
-const htmllint = require('../lib/htmllint.js');
-const expectedResults = require('./helpers/expected_results.js');
+import * as fs from 'node:fs';
+import { strict as assert } from 'node:assert';
+import path from 'node:path';
+import { htmllint } from '../lib/htmllint.js';
+import { results as expectedResults } from './helpers/expected_results.js';
 
 function run(config, expected, message, done) {
   htmllint(config, (error, result) => {
